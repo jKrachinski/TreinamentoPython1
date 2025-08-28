@@ -14,7 +14,7 @@ saques_realizados = 0
 
 def realizar_deposito(saldo_atual, extrato, deposito):
     saldo_atual += float(deposito)
-    extrato += "Depósito: +R$" + str(deposito) + '\n'
+    extrato += "Depósito: +R$" + str("%.2f" % float(deposito)) + '\n'
     return saldo_atual, extrato
 
 
@@ -28,7 +28,7 @@ def realizar_saque(saldo_atual, extrato, saque: float, saques_realizados):
         return saldo_atual, extrato, saques_realizados
 
     saldo_atual -= float(saque)
-    extrato += "Saque: -R$" + str(round(saque, 2)) + '\n'
+    extrato += "Saque: -R$" + str("%.2f" % float(saque)) + '\n'
     saques_realizados += 1
     return saldo_atual, extrato, saques_realizados
 
@@ -51,7 +51,7 @@ while True:
 
     elif (i == 'e'):
         print(extrato)
-        print('Saldo Atual: R$' + str(round(saldo_atual, 2)))
+        print('Saldo Atual: R$' + str("%.2f" % saldo_atual))
 
     elif (i == 'q'):
         break
