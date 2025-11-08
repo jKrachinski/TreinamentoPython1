@@ -1,3 +1,13 @@
+def retorna_um():
+    """
+    Retorna o valor 1.
+    
+    Returns:
+        int: O valor 1
+    """
+    return 1
+
+
 def increment(number):
     """
     Increases the value of a number by 1.
@@ -17,6 +27,9 @@ def increment(number):
 
 if __name__ == "__main__":
     # Example usage
+    print(f"retorna_um() = {retorna_um()}")
+    print()
+    
     value = 5
     result = increment(value)
     print(f"Original value: {value}")
